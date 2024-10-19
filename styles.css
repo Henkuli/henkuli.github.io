@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 
 body {
     font-family: 'Syne Mono', monospace; 
@@ -23,12 +24,13 @@ header {
 }
 
 h1 {
-    color: #f0f0f0; /* Light gray */
-    font-size: 3em; /* Increase font size */
+	font-family: "Rubik Glitch", system-ui;
+    color: #ffffff; 
+    font-size: 4em; /* Increase font size */
     text-shadow: 
-        0 0 10px rgba(204, 204, 204, 0.8), /* Glow effect */
-        0 0 20px rgba(204, 204, 204, 0.6),
-        0 0 30px rgba(204, 204, 204, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.5), /* Glow effect */
+        0 0 20px rgba(234, 234, 234, 0.2),
+        0 0 30px rgba(204, 204, 204, 0.1),
         4px 4px 15px rgba(0, 0, 0, 0.9); /* Depth shadow */
     margin: 20px 0; /* Space above and below */
     letter-spacing: 2px; /* Increased spacing between letters */
@@ -37,7 +39,6 @@ h1 {
     -webkit-background-clip: text; /* Clip background to text */
     -webkit-text-fill-color: transparent; /* Make text fill transparent */
     animation: flicker 1.5s infinite alternate; /* Flicker effect */
-    position: relative; /* For positioning the white noise */
 }
 
 /* Flicker animation */

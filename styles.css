@@ -105,10 +105,4 @@ footer {
     }
 }
 
-a {
-    color: #00bcd4; /* Link color */
-}
 
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}

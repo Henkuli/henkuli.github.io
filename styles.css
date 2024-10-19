@@ -2,6 +2,7 @@
 /*GPT induced chaos below*/
 body {
     font-family: 'Syne Mono', monospace; 
+	font-display: swap;
     line-height: 1.6;
     margin: 0;
     padding: 0px;

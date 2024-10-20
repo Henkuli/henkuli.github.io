@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inane Thoughts</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .blog-entry {
+            margin: 15px 0;
+        }
+        .blog-content {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Inane Thoughts</h2>
+    <div class="blog-entry">
+        <h3 class="entry-title">Thought 1: The Nature of Reality</h3>
+        <div class="blog-content">
+            <p>This is the full text of the first thought. It discusses the nature of reality and how we perceive it...</p>
+        </div>
+    </div>
+    <div class="blog-entry">
+        <h3 class="entry-title">Thought 2: The Infinite Universe</h3>
+        <div class="blog-content">
+            <p>This is the full text of the second thought. It explores the concept of an infinite universe and our place within it...</p>
+        </div>
+    </div>
+    <div class="blog-entry">
+        <h3 class="entry-title">Thought 3: The Passage of Time</h3>
+        <div class="blog-content">
+            <p>This is the full text of the third thought. It reflects on how we perceive time and its effects on our lives...</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.entry-title').forEach(title => {
+            title.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+                document.querySelectorAll('.blog-content').forEach(blog => {
+                    blog.style.display = 'none'; // Hide all other entries
+                });
+                content.style.display = isVisible ? 'none' : 'block'; // Toggle the clicked entry
+            });
+        });
+    </script>
+</body>
+</html>

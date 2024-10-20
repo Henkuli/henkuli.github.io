@@ -10,24 +10,45 @@
     <header>
         <h1>creation is a lie</h1>
     </header>
-
-    <section id="things">
-        <h2>things becoming</h2>
-        <ul>
-            <li>
-                <p>sine waves</p>
-			</li>
-			<li>
-				<p>pixel values</p>
-			</li>
-			<li>
-				<p>linguistic abstracts</p>
-            </li>
-        </ul>
-    </section>
+    <div class="content">
+        <div class="menu">
+            <div class="menu-item" data-target="./sine-waves.html">sine waves</div>
+            <div class="menu-item" data-target="./pixel-values.html">pixel values</div>
+            <div class="menu-item" data-target="./inane-thoughts.html">inane thoughts</div>
+        </div>
+        <div id="content-area">
+            <!-- New content will load here -->
+        </div>
+    </div>
 
     <footer>
-		<p>you are not welcome nor forced to leave</p>
+        <div class="glitch">
+            <span class="static">you are not welcome nor forced to leave</span>
+            <span class="red-glitch">you are not welcome nor forced to leave</span>
+            <span class="blue-glitch">you are not welcome nor forced to leave</span>
+        </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                fetch(target)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('content-area').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                        document.getElementById('content-area').innerHTML = '<p>Error loading content. Please try again.</p>';
+                    });
+            });
+        });
+    </script>
 </body>
 </html>

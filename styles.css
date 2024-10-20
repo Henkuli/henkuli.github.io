@@ -6,13 +6,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0px;
+	height: 100vh;
     overflow: hidden; /* Prevent overflow issues */
     background-color: #000000; 
     color: #a1a1a1; 
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
-    /* justify-content: center; */ /* Center items horizontally */
 }
 
 header {
@@ -79,31 +79,15 @@ h2 {
 
 footer {
     text-align: center;
-    background: #0d0d0d; /* Dark footer */
     color: #fff;
     position: relative;
+	font-size: 2em;
     bottom: 0;
     width: 100%; /* Full width for the footer */
-    /* padding: 10px 0; */
-    /* margin: 20px; */
+    padding: 10px 0; 
+    margin: 20px; 
 }
 
-.scrolling-text {
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflow */
-    position: absolute; /* Position absolutely for smooth scrolling */
-    width: 100%; /* Full width */
-    font-size: 2em; /* Adjust font size */
-    animation: scroll 10s linear infinite; /* Animation settings */
-}
 
-@keyframes scroll {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-    }
-    100% {
-        transform: translateX(-100%); /* End off-screen to the left */
-    }
-}
 
 
